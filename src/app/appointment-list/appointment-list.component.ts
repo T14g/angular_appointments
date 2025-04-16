@@ -7,10 +7,12 @@ import { Appointment } from '../models/appointment';
 })
 export class AppointmentListComponent {
 
-  appointment : Appointment = {
-    title : 'Appointment',
-    id: 1,
-    date: new Date('2025-04-15')
-  };
+  newAppointmentTitle : string = "";
+  newAppointmentDate : Date = new Date();
+  appointment : Appointment[] = []
+
+  addAppointment() {
+    alert(this.newAppointmentTitle + " " + this.newAppointmentDate)
+  }
 
 }
